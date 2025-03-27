@@ -19,7 +19,7 @@ function Zadanie2() {
 
 function Zadanie3() {
     let r = Number(prompt("Введите радиус", 1));
-    alert(Math.PI * r * r);
+    alert(`Площадь круга: ${Math.PI * r * r}`);
 }
 
 function Zadanie4() {
