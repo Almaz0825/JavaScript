@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="image_block">
+        <img src="assets/image/catalog/id_1/image_01.png" alt="" class="main_img">
+        <div class="img_slider">
+            <button class="slider_btn prev" disabled="">
+                <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 7L1 4L4 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <div class="img_overflow">
+                <div class="img_items" style="transform: translateX(0px);">
+                    <img src="assets/image/catalog/id_1/image_01.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_02.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_03.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_04.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_05.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_06.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_07.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_08.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                    <img src="assets/image/catalog/id_1/image_09.png" alt=""
+                        onclick="document.querySelector('.main_img').src = this.src">
+                </div>
+            </div>
+            <button class="slider_btn next">
+                <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 4L1 7" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
