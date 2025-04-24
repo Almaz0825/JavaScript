@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="modal_container modal-test-drive" id="modal-test-drive">
+        <form method="post" class="modal">
+            <p class="title">Тест-драйв</p>
+            <div class="input-label-gray">
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="input-label-gray">
+                <label for="phone">Телефон</label>
+                <input type="text" name="phone" id="phone" required>
+            </div>
+            <div class="input-label-gray">
+                <label for="brend">Автомобиль</label>
+                <div class="select_container">
+                    <select name="brend" id="brend" required>
+                        <option value="">Марка</option>
+                    </select>
+                </div>
+                <div class="select_container">
+                    <select name="model" id="model" required>
+                        <option value="">Модель</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-label-gray">
+                <label for="date">Дата и время</label>
+                <input type="datetime-local" name="date" id="date" required>
+            </div>
+            <div class="btns">
+                <input type="submit" name="cat_add" class="btn red" value="Отправить">
+            </div>
+        </form>
+    </div>
+    <!-- modal -->
+
+    <div class="container modal_btn">
+        <button class="btn red" onclick="Modal_open('modal-test-drive')">
+            <p>Открыть модальное окно</p>
+        </button>
+    </div>
+
+    <div class="popular">
+        <div class="title">
+            <h2>Популярные модели</h2>
+            <div class="line"></div>
+        </div>
+        <div class="popular_content">
+            <div class="filter">
+                <div class="tab active">Седан</div>
+                <div class="tab">Спорткар</div>
+                <div class="tab">Кроссовер</div>
+                <div class="tab">Хэтчбек</div>
+            </div>
+            <div class="cards active">
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_01.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_01.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_02.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_02.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_03.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_03.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_04.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/image/catalog/id_1/image_04.png" alt="">
+                    <div class="card_content">
+                        <div class="name">
+                            <p class="brend">Mersedes-Benz</p>
+                            <p class="model">AMG GT Black Series</p>
+                        </div>
+                        <div class="right_block">
+                            <div class="specs">
+                                <div class="item">
+                                    <p class="name">Мощность:</p>
+                                    <p class="value">730 л.с.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Объем:</p>
+                                    <p class="value">4,0 л.</p>
+                                </div>
+                                <div class="item">
+                                    <p class="name">Топливо:</p>
+                                    <p class="value">Бензин</p>
+                                </div>
+                            </div>
+                            <p class="price">50 500 000 ₽</p>
+                            <a href="?page=carpage&amp;id=1" class="btn">
+                                <p>Подробнее</p>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.93994 13.7802L10.2866 9.43355C10.7999 8.92021 10.7999 8.08021 10.2866 7.56688L5.93994 3.22021"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

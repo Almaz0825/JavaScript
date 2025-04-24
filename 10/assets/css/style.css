@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'OpenSans', sans-serif;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 9px 17px;
+    border-radius: 50px;
+    background-color: #100E34;
+    border: none;
+    font-size: 15px;
+    color: white;
+    transition: 0.5s;
+}
+
+.btn svg {
+    height: 16px;
+    stroke: white;
+}
+
+.btn.red {
+    background-color: #A2001D;
+}
+
+.title {
+    position: relative;
+    max-width: 464px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 10px;
+    background-color: #F8F8F8;
+    width: fit-content;
+    text-align: center;
+    z-index: 1;
+}
+
+.title .line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #D3D5E0;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal_container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.modal_container.modal-test-drive {
+    padding-top: 0;
+    align-items: center;
+}
+
+.modal_container.active {
+    display: flex;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    height: fit-content;
+}
+
+.modal-test-drive .modal {
+    width: 500px;
+    gap: 20px;
+    padding: 30px 50px;
+}
+
+.modal-test-drive .btns,
+.modal-test-drive .btn {
+    width: 100%;
+}
+
+.modal .title {
+    font-size: 24px;
+}
+
+.modal .btns {
+    display: flex;
+    gap: 10px;
+}
+
+.modal .btns {
+    display: flex;
+    gap: 10px;
+}
+
+.modal .btns .btn {
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+.input-label-gray {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.input-label-gray label {
+    font-size: 18px;
+}
+
+.input-label-gray input {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #eee;
+}
+
+.input-label-gray select {
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #eee;
+}
+
+.input-label-gray select:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.input-label-gray .select_container {
+    position: relative;
+    width: 100%;
+}
+
+.input-label-gray .select_container::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: 0;
+    pointer-events: none;
+    border-radius: 5px;
+    background: url('../image/arrow.svg') no-repeat;
+    background-position: right 14px center;
+    background-size: 12px 12px;
+    background-color: #eee;
+}
+
+.modal_btn {
+    padding: 50px;
+}
+
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 75px 0;
+    background-color: #EAEBF0;
+}
+
+.popular h2 {
+    background-color: #EAEBF0;
+}
+
+.popular_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.popular .filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.popular .filter .tab {
+    cursor: pointer;
+    color: #666872;
+    border-radius: 50px;
+    padding: 10px 18px;
+    transition: 0.3s;
+}
+
+.popular .filter .tab.active {
+    background-color: #A2001D;
+    color: white;
+}
+
+.popular .cards {
+    width: 98.9vw;
+    padding: 0 100px;
+    display: none;
+    align-items: center;
+    gap: 65px;
+}
+
+.popular .cards.active {
+    display: flex;
+}
+
+.popular .catalog_btn {
+    padding: 17px;
+}
+
+.popular .catalog_btn svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.popular .card {
+    display: flex;
+    margin-left: -55px;
+}
+
+.popular .card img {
+    width: 327px;
+    height: 247px;
+    object-fit: cover;
+    position: relative;
+    left: 55px;
+    top: 93px;
+    border: 1px solid #100E34;
+    border-radius: 15px;
+}
+
+.popular .card_content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 311px;
+}
+
+.popular .card .name {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.popular .card .brend {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.popular .card .model {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.popular .card .right_block {
+    align-self: end;
+    max-width: 213px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.popular .card .specs {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.popular .card .specs .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular .card .item .name {
+    font-size: 14px;
+    color: #666872;
+    line-height: 180%;
+}
+
+.popular .card .item .value {
+    font-size: 14px;
+    line-height: 180%;
+}
+
+.popular .card .price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #100E34;
+}
+
+.popular .card .btn {
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
